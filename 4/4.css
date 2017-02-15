@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	text-align: center;
+	font-family: 'ABeeZee', sans-serif;
+	font-weight: 600;
+}
+
+input {
+	border: 2px solid #000;
+	width: 75%;
+	margin-top: 3vh;
+	padding-left: 1vh;
+}
+
+::-webkit-input-placeholder {
+	color: #000;
+}
+
+h5 {
+	text-align: left;
+	margin-left: 5% ;
+	margin-bottom: -2vh;
+	font-weight: 600;
+}
+
+.text-box {
+	text-align:center;
+	padding: 2.5px;
+	border: 2px solid black;
+}
+
+select {
+	margin-top: 3vh;
+	width: 75%;
+	border: 2px solid #000;
+}
+
+img.pie-chart {
+	width : 55%;
+}
+
+button.all-buttons{
+	width: 97%;
+	cursor: pointer;
+	height: 9vh;
+	margin-top: 2vh;
+	border: 2px solid #000;
+	box-shadow: 4px 4px #000;
+	background: #fff;
+}

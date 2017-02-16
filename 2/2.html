@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Sign-up Screen</title>
+  <title>Screen 2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -15,34 +15,35 @@
 		<form action="#" method="POST">
 			<div class="row">
 
-				<div class="col-md-12" >
-					<input type="text" name="first_name" placeholder="First Name">
-				</div>
+				<div class="col-md-12 ">
+        			<input class="form-control" type="text" value="First Name"  >
+           		</div>
 					
-				<div class="col-md-12" >
-					<input type="text" name="last_name" placeholder="Last Name">
-				</div>
+				
+				<div class="col-md-12 ">
+        			<input class="form-control" type="text" value="Last Name"  >
+           		</div>
 
-				<div class="col-md-12" >
-					<input type="email" name="email" placeholder="email">
-				</div>
+           		<div class="col-md-12 ">
+        			<input class="form-control" type="email" value="email"  >
+           		</div>
 
-				<div class="col-md-12" >
-					<input type="password" name="password" placeholder="password">
-				</div>
+				<div class="col-md-12 ">
+        			<input class="form-control" type="password" value="" placeholder="password" >
+           		</div>
+           		
+           		<div class="col-md-12 ">
+        			<input class="form-control" type="password" value="" placeholder="Re-enter password"  >
+           		</div>
 
+				<h4>Optional:</h4>
+				
+				<div class="col-md-12 ">
+        			<input class="form-control" type="text" value="Age"  >
+           		</div>			
+				
 				<div class="col-md-12" >
-					<input type="password" name="re_enter_password" placeholder="Re-enter Password">
-				</div>
-			
-				<h5>Optional:</h5>
-							
-				<div class="col-md-12" >
-					<input type="number" name="age" placeholder="Age">
-				</div>
-
-				<div class="col-md-12" >
-					<select class="gender_picker" title="gender">
+					<select class="form-control" name="gender_picker">
 						<option hidden >Gender</option>
 						<option>Male</option>
 						<option>Female</option>
@@ -50,12 +51,13 @@
 					</select>
 				</div>
 
-				<div class="col-md-12" >
-					<input type="text" name="city" placeholder="City">
-				</div>
+				<div class="col-md-12 ">
+        			<input class="form-control" type="text" value="City"  >
+           		</div>
 
+           		
 				<div class="col-md-12" >
-					<select class="province_picker" title="province">
+					<select class="form-control" name="province_picker">
 						<option hidden >Province</option>
 						<option>AB</option>
 						<option>BC</option>
@@ -73,20 +75,20 @@
 					</select>
 				</div>
 				
-				<div class="col-md-12" >
-					<input type="text" data-format="+1 (ddd) ddd-dddd" name="phone" placeholder="Phone #">
-				</div>
+				<div class="col-md-12 ">
+        			<input class="form-control" type="text" value="Phone #"  >
+           		</div>
+           		
+           		<div class="col-md-12 ">
+        			<input class="form-control" type="text" value="Team Code"  >
+           		</div>
 
+				<div class="col-md-12 ">
+        			<input class="form-control" type="text" value="12 Month Goal- Volunteer hours"  >
+           		</div>
+           		
 				<div class="col-md-12" >
-					<input type="text" name="team_code" placeholder="Team Code">
-				</div>
-
-				<div class="col-md-12" >
-					<input type="text" name="team_code" placeholder="12 Month Goal- Volunteer hours">
-				</div>
-
-				<div class="col-md-12">
-					<button id ="sign_up">Sign-up</button>
+					<button type="submit" class="btn btn-primary" id ="sign_up_btn">Sign-up</button>
 				</div>
 				
 			</div>
@@ -94,3 +96,4 @@
 		</form>
 	</div>
 </body>
+</html>

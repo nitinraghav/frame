@@ -5,46 +5,38 @@
 }
 
 body {
-	text-align: center;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 600;
+	text-align: center;
 }
 
-.fblogin {
-	border: 2px solid #000;
+#fb_login_btn {
 	margin-top: 15vh;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 2vh;
-	box-shadow: 4px 4px #000;
-	width: 75%;
-	
-}
+	box-shadow: 3px 3px 5px #808080;
+	width: 80%;
+	height: 10vh;
+}	
 
 .txt {
 	margin-top: 5vh;
+	font-size: 1.2em;
 }
 
 #email {
-	border: 2px solid #000;
-	margin-top: 3vh;
-	width: 75%;
-	padding: 1vh;
+	width: 80%;
+	margin: auto;
+	margin-top: 2vh;
 }
 
 #password {
-	border: 2px solid #000;
+	width: 80%;
+	margin: auto;
 	margin-top: 2vh;
-	width: 75%;
-	padding: 1vh;
 }
 
 button {
-	width: 40%;
-	height: 9vh;
-	margin-top: 3vh;
-	border: 2px solid #000;
-	box-shadow: 4px 4px #000;
-	background: #fff;
-
+	width: 45%;
+	height: 10vh;
+	margin: 3vh;
+	box-shadow: 3px 3px 5px #808080;	
 }

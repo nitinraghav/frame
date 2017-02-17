@@ -10,25 +10,20 @@ body {
 }
 
 #text_area{
-	width: 80%;
 	margin-top: 10vh;
-	margin-left: auto;
-	margin-right: auto;
-	border: 2px solid #000;
-	border-radius: 5px;
 	overflow-y: scroll;
 	overflow-x: hidden;
-
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 #check{
 	margin-top: 5vh;
 }
 
 #sign_up {
-	width: 45%;
-	height: 11vh;
+	width: 50%;
+	height: 10vh;
 	margin-top: 5vh;
-	border: 2px solid #000;
-	box-shadow: 4px 4px #000;
-	background: #fff;
+	box-shadow: 3px 3px 5px #808080;
 }

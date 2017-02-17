@@ -14,40 +14,42 @@
 <body>
 	<div class="container">
 		
-		<button class="fblogin" id = "fbloginbtn">Login with Facebook</button>
-
-		<div class="txt">Or use your email:</div>
-
-		<div class="form">
-			<form action="#" method="POST">
-				<div class="row">
-					<div class="col-md-12" >
-						<input type="email" name="email" placeholder="email" id="email" >
-					</div>
-						
-					<div class="col-md-12" >
-						<input type="password" name="password" placeholder="password" id="password" >
-					</div>
-				</div>
-			</form>
-		</div>
-
-		
 		<div class="row">
-			<div class="col-md-12">
-				<button >Login</button>
+		
+			<div class="col-md-12" >
+				<button type="submit" class="btn btn-primary" id ="fb_login_btn">Login with Facebook</button>
+			</div>
+
+			<div class="col-md-12 txt">Or use your email:</div>
+
+			
+			<form action="#" method="POST">
+				
+					<div class="col-md-12 ">
+	        			<input class="form-control" type="email" placeholder="email" id="email" >
+	           		</div>
+						
+					<div class="col-md-12 ">
+	        			<input class="form-control" type="password" value="" placeholder="password" id="password" >
+	           		</div>
+				
+			</form>
+			
+			<div class="col-md-12" >
+					<button type="submit" class="btn btn-primary" id ="" >Login</button>
 			</div>
 				
 			<div class="col-md-12">
-				<button >Forgot Password</button>
+				<button type="submit" class="btn btn-primary" id ="" >Forgot Password</button>
 			</div>
 
 			<div class="col-md-12">
-				<button >Sign-up</button>
+				<button type="submit" class="btn btn-primary" id ="" >Sign-up</button>
 			</div>
-		</div>
-				
+		</div>			
 	</div>
+</div>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 <script src="call.js"></script>

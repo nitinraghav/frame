@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
 
+* {
+margin: 0;
+padding: 0;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -20,7 +25,7 @@ body {
 
 #check_bid {
 	margin-top: 3vh;
-	box-shadow: 2px 2px 2px #808080;
+	box-shadow: 3px 3px 5px #808080;
 }
 
 #winner-text {
@@ -48,5 +53,5 @@ body {
 
 #bid_now {
 	margin: 3vh 0 5vh 0;
-	box-shadow: 2px 2px 2px #808080;
+	box-shadow: 3px 3px 5px #808080;
 }

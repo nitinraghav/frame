@@ -10,9 +10,15 @@ body {
 	text-align: center;
 }
 
+.response {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
 input {
 	margin-top: 3vh;
 	padding-left: 2vh;
+	width: 70%;
 }
 
 h4 {
@@ -27,7 +33,7 @@ select {
 }
 
 #sign_up_btn {
-	width: 45%;
+	width: 80%;
 	height: 10vh;
 	margin: 3vh;
 	box-shadow: 3px 3px 5px #808080;	

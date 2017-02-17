@@ -7,10 +7,14 @@ padding: 0;
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  padding: 5vh;
 }
 
 #bar_holder {
 	height: 10vh;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #bars {
@@ -20,12 +24,13 @@ body {
 }
 
 #artwork-search{
-	margin-top: 7vh;
+	margin-top: 5vh;
 }
 
 #check_bid {
 	margin-top: 3vh;
 	box-shadow: 3px 3px 5px #808080;
+	height: 7vh;
 }
 
 #winner-text {
@@ -52,6 +57,7 @@ body {
 }
 
 #bid_now {
-	margin: 3vh 0 5vh 0;
+	margin: 3vh 0;
 	box-shadow: 3px 3px 5px #808080;
+	height: 7vh;
 }

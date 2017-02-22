@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,7 +8,46 @@ body {
 	text-align: center;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 600;
+	padding-top: 70px; /* it clears:both for navbar*/
 }
+/* navbar starts */
+.navbar-header, .navbar-collapse{
+	background-color: #000 !important;
+}
+
+#myNavbar {
+	background-size:cover;
+}
+
+.navbar-brand {
+	font-size: 1.4em;
+	color: #fff !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 4vh 5vh 4vh 0;
+	float: right;
+}
+
+.navbar-toggle {
+	float: left;
+	margin-left: 2vh;
+}
+
+.navbar-brand:hover {
+	text-decoration: underline;
+}
+
+.nav a {
+  	font-size: 1.4em;
+	color: #fff !important;
+	text-align: center;
+	padding-top: 5%;
+}
+
+ul.nav a:hover {
+	text-decoration: underline;
+}
+ /*navbar ends*/
 
 #text_area{
 	margin-top: 10vh;
@@ -24,6 +64,7 @@ body {
 #sign_up {
 	width: 80%;
 	height: 10vh;
-	margin-top: 5vh;
+	margin: 5vh 0;
 	box-shadow: 3px 3px 5px #808080;
+	background-color:  #27CCC0;
 }

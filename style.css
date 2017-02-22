@@ -8,10 +8,50 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 600;
 	text-align: center;
+	padding-top: 70px; /* it clears:both for navbar*/
 }
 
+/* navbar starts */
+.navbar-header, .navbar-collapse{
+	background-color: #000 !important;
+}
+
+#myNavbar {
+	background-size:cover;
+}
+
+.navbar-brand {
+	font-size: 1.4em;
+	color: #fff !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 4vh 5vh 4vh 0;
+	float: right;
+}
+
+.navbar-toggle {
+	float: left;
+	margin-left: 2vh;
+}
+
+.navbar-brand:hover {
+	text-decoration: underline;
+}
+
+.nav a {
+  	font-size: 1.4em;
+	color: #fff !important;
+	text-align: center;
+	padding-top: 5%;
+}
+
+ul.nav a:hover {
+	text-decoration: underline;
+}
+ /*navbar ends*/
+
 img {
-	margin-top: 10vh;
+	margin-top: 4vh;
 	width: 92%;
 	height: 10vh;
 	margin-left: auto;
@@ -19,7 +59,7 @@ img {
 }
 
 .txt {
-	margin-top: 5vh;
+	margin-top: 2vh;
 	font-size: 1.4em;
 }
 
@@ -35,9 +75,10 @@ img {
 	margin-top: 2vh;
 }
 
-button {
+.btns {
 	width: 80%;
 	height: 10vh;
-	margin: 3vh;
-	box-shadow: 3px 3px 5px #808080;	
+	margin: 2vh;
+	box-shadow: 3px 3px 5px #808080;
+	background-color: #27CCC0;	
 }

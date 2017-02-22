@@ -8,20 +8,48 @@ padding: 0;
 body {
   font-family: 'Source Sans Pro', sans-serif;
   padding: 5vh;
+  padding-top: 70px; /* it clears:both for navbar*/
 }
 
-#bar_holder {
-	height: 10vh;
-	width: 95%;
-	margin-left: auto;
-	margin-right: auto;
+/* navbar starts */
+
+.navbar-header, .navbar-collapse{
+	background-color: #000 !important;
 }
 
-#bars {
-	font-size: 2.8em;
+#myNavbar {
+	background-size:cover;
+}
+
+.navbar-brand {
+	font-size: 1.4em;
+	color: #fff !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 4vh 5vh 4vh 0;
+	float: right;
+}
+
+.navbar-toggle {
+	float: left;
 	margin-left: 2vh;
-	margin-top: 1vh;
 }
+
+.navbar-brand:hover {
+	text-decoration: underline;
+}
+
+.nav a {
+  	font-size: 1.4em;
+	color: #fff !important;
+	text-align: center;
+	padding-top: 5%;
+}
+
+ul.nav a:hover {
+	text-decoration: underline;
+}
+ /*navbar ends*/
 
 #artwork-search{
 	margin-top: 5vh;
@@ -30,7 +58,8 @@ body {
 #check_bid {
 	margin-top: 3vh;
 	box-shadow: 3px 3px 5px #808080;
-	height: 7vh;
+	height: 11vh;
+	background-color: #27CCC0;
 }
 
 #winner-text {
@@ -59,5 +88,6 @@ body {
 #bid_now {
 	margin: 3vh 0;
 	box-shadow: 3px 3px 5px #808080;
-	height: 7vh;
+	height: 11vh;
+	background-color: #27CCC0;
 }

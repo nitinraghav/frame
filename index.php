@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Login Screen</title>
+  <title>Framework | Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -48,48 +48,26 @@
 		<div class="row">
 			
 			<div class="col-md-12">
-				<img class="img-responsive" src="http://i.imgur.com/XHJ1R6s.png">
+				<a href="fblogin.php"><img class="img-responsive fb-login-img" src="http://i.imgur.com/XHJ1R6s.png"></a>
 			</div>
 
 			<div class="col-md-12 txt">Or use your email:</div>
-
 			
-			<form action="#" method="POST">
-				
-					<div class="col-md-12 ">
-	        			<input class="form-control" type="email" placeholder="email" id="email" >
-	           		</div>
-						
-					<div class="col-md-12 ">
-	        			<input class="form-control" type="password" value="" placeholder="password" id="password" >
-	           		</div>
-				
+			<form action="login.php" method="POST">
+				<input class="form-control" type="email" name ="user" placeholder="email" id="email" required> <br />
+       			<input class="form-control" type="password" name="pass" placeholder="password" id="password" required> <br />
+      			<button type="submit" class="btn btn-primary buttons" id ="" >Login</button> <br />
 			</form>
 			
-			<div class="col-md-12" >
-					<button type="submit" class="btn btn-primary btns" id ="" >Login</button>
-			</div>
-				
-			<div class="col-md-12">
-				<button type="submit" class="btn btn-primary btns" id ="" >Forgot Password</button>
-			</div>
+			<button type="submit" class="btn btn-primary buttons" id ="" >Forgot Password</button> <br />
+			<a href="2/2.php"><button type="submit" class="btn btn-primary buttons" id ="" >Sign-up</button></a> <br />
 
-			<div class="col-md-12">
-				<button type="submit" class="btn btn-primary btns" id ="" >Sign-up</button>
-			</div>
 		</div>			
 	</div>
-</div>
 
-<!-- Latest compiled and minified JavaScript -->
+	<!-- Latest compiled and minified JavaScript -->
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-
-	
-	<script src="call.js"></script>
-
-
-
 
 </body>
 </html>

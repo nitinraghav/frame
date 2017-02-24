@@ -12,6 +12,9 @@ body {
 }
 
 /* navbar starts */
+.navbar {
+	background-color: #000 !important;
+}
 
 .navbar-header, .navbar-collapse{
 	background-color: #000 !important;
@@ -26,7 +29,7 @@ body {
 	color: #fff !important;
 	font-weight: bold;
 	text-transform: uppercase;
-	padding: 4vh 5vh 4vh 0;
+	padding: 4vh 5vh 6vh 4vh;
 	float: right;
 }
 
@@ -43,7 +46,8 @@ body {
   	font-size: 1.4em;
 	color: #fff !important;
 	text-align: center;
-	padding-top: 5%;
+	padding-top: 6vh;
+	margin-top: 1.5vh;
 }
 
 ul.nav a:hover {
@@ -74,9 +78,10 @@ select {
 }
 
 #sign_up_btn {
+	font-size: 1.5em;
 	width: 80%;
 	height: 10vh;
-	margin: 3vh;
-	box-shadow: 3px 3px 5px #808080;	
-	background-color:  #27CCC0;
+	margin: 2vh;
+	box-shadow: 1px 1px 2px #808080;
+	background-color: #27CCC0;
 }

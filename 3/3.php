@@ -1,44 +1,7 @@
-<!DOCTYPE html>
-<html >
+<?php 
 
-<head>
-  <meta charset="UTF-8">
-  <title>Terms &amp; Conditions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="3.css">
-
-</head>
-<body>
-	<div class="container">
-		<!-- navbar starts -->
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			
-			<div class="container-fluid">
-
-			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
-			      <span class="sr-only">Toggle navigation</span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span> 
-			    </button>
-			    <a class="navbar-brand" href="#">Terms &amp; Conditions</a>
-			  </div>
-
-			  <div class="collapse navbar-collapse" id="myNavbar">
-			    <ul class="nav navbar-nav navbar-right">
-			      <li><a href="#home">Home</a></li>
-			      <li><a href="#about">About</a></li>
-			      <li><a href="#contact">Contact</a></li>
-			    </ul>
-			  </div>
-
-			</div>
-		</nav>
-		<!-- navbar ends -->
+$pageTitle ="Terms &amp; Conditions | We Are Framework";
+include("../includes/header.php"); ?>
 
 		<div class="row">
 		
@@ -47,7 +10,6 @@
 			<br />
 			
 			
-
 
 			<!-- add user to Database-->
 			<?php
@@ -76,9 +38,6 @@
 				$team_code = $_POST['team-code'];
 				$volunteer_hours = $_POST['volunteer-hours'];
 				
-				
-
-
 
 				$query = "INSERT INTO user (first_name, last_name, email, password, age, gender, city, province, phone, team_code) VALUES ('$first_name', '$last_name', '$email', '$password', '$age', '$gender', '$city', '$province', '$phone', '$team_code')";
 				$result = mysqli_query($conn, $query);
@@ -88,16 +47,15 @@
 				} 
 			?>
 
-			<label>
-				<input type="checkbox" value="" id="check" required> &nbsp;I agree to the terms of service
-			</label>
-			<br />
-
-			<a href="sign_up_success.php"><button type="submit" class="btn btn-primary" id ="sign_up">Sign-up</button></a> <br />
+			
+				<input type="checkbox" name="checkbox" id="check" required> &nbsp;I agree to the terms of service
+				<br />
+				<a href="../4paul/4.html"><button type="submit" class="btn btn-primary" id ="sign_up">Sign-up</button></a>
+			
 
 		</div>
-	</div>
-<!-- Latest compiled and minified JavaScript -->
+	</div> <!-- end content -->
+	<!-- Latest compiled and minified JavaScript -->
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 

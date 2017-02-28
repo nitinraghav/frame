@@ -19,7 +19,7 @@ $myusername = stripslashes($myusername);
 $mypassword = stripslashes($mypassword);
 
 
-$sql = "SELECT email, password FROM user WHERE BINARY email='$myusername' and BINARY password='$mypassword'";
+$sql = "SELECT email, password FROM user WHERE email='$myusername' and BINARY password='$mypassword'";
 
 $result = mysqli_query($conn, $sql);
 

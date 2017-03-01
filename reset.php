@@ -1,57 +1,42 @@
 <?php
 
-//connect to mySQL DB
-$servername = "localhost";
-$dbname = "framework";
-$username = "root";
-$password = "";
+    session_start();
 
+    $token= $_GET['token'];
 
-$conn = mysqli_connect($servername,$username,$password,$dbname);
+    include("includes/dbc.php");
 
-if (!$conn) {
- die("Error: " . mysqli_connect_error());
-}
+    if(!isset($_POST['password'])){
+        
+        $q="SELECT email FROM tokens where token='".$token."' and used=0";
+        $r=mysqli_query($q);
 
-// Was the form submitted?
-if (isset($_POST["ResetPasswordForm"])) 
-{
-
-	// Gather the post data
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $confirmpassword = $_POST["confirmpassword"];
-    $hash = $_POST["q"];
-
-    // Use the same salt from the forgot_password.php file
-    $salt = "498#2D83B631%3800EBD!801600D*7E3CC13";
-
-    // Generate the reset key
-    $resetkey = hash('sha512', $salt.$email);
-
-    // Does the new reset key match the old one?
-    if ($resetkey == $hash)
-    {
-        if ($password == $confirmpassword) 
-        {
-            //has and secure the password
-            $password = hash('sha512', $salt.$password);
-            // Update the user's password
-                $query = $conn->prepare('UPDATE users SET password = :password WHERE email = :email');
-                $query->bindParam(':password', $password);
-                $query->bindParam(':email', $email);
-                $query->execute();
-                $conn = null;
-
-                echo "Your password has been successfully reset.";
+        while($row = mysqli_fetch_array($r))
+           {
+                $email=$row['email'];
+           }
+        if ($email!=''){
+                  $_SESSION['email']= $email;
         }
-        else
-            echo "Your password's do not match.";
+        else die("Invalid link or Password already changed");
     }
-	else
-        echo "Your password reset key is invalid.";
-}
- 
 
+    $pass= $_POST['password'];
+    $email= $_SESSION['email'];
+    
+    if(!isset($pass)){
+        echo '<form method="post">
+        enter your new password:<input type="password" name="password" />
+        <input type="submit" value="Change Password">
+        </form>
+        ';
+    }
 
+    if(isset($_POST['password'])&&isset($_SESSION['email'])) {
+        $q="update users set password='".md5($pass)."' where email='".$email."'";
+        $r=mysql_query($q);
 
+        if($r)mysql_query("update tokens set used=1 where token='".$token."'");
+        echo "Your password is changed successfully";
+        if(!$r)echo "An error occurred";
+    }

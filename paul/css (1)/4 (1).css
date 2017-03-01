@@ -1,0 +1,30 @@
+
+body{
+	background-color: #fff;
+}
+
+.text-box {
+	text-align:center;
+	padding: 0.2em;
+	border: 0.1em solid black;
+	z-index:+1 !important;
+}
+
+button.all-buttons{
+	margin-bottom: 1vh !important;
+
+}
+
+.panelwidth {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.pie-chart-height {
+	height : 40%;
+}
+
+ .centeralign {
+	text-align: center;
+ }

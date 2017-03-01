@@ -1,16 +1,8 @@
 <?php
 
-$servername = "localhost";
-$dbname = "framework";
-$username = "root";
-$password = "";
+session_start();
 
-
-$conn = mysqli_connect($servername,$username,$password,$dbname);
-
-if (!$conn) {
- die("Error: " . mysqli_connect_error());
-}
+include("includes/dbc.php");
 
 $myusername = $_POST['user'];
 $mypassword = $_POST['pass'];
@@ -33,4 +25,3 @@ if(mysqli_num_rows($result) == 1) {
 
 mysqli_close($conn);
 
-?>﻿

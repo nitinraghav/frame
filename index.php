@@ -1,8 +1,9 @@
-	<?php 
 
-	$pageTitle = "Login | We Are Framework";
-
-	include("includes/header.php"); ?>
+<?php 
+	$CSS = "style.css";
+	$pageTitle = "Login | Framework";
+	include("includes/header.php");
+?>
 
 		<div class="row">
 			

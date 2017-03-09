@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+
+/* pre-define all font-size at beginning */
+/*@media (min-width: 240px)  { body {font-size: 12px;} }
+@media (min-width: 288px)  { body {font-size: 14px;} }
+@media (min-width: 336px)  { body {font-size: 16px;} }
+@media (min-width: 384px)  { body {font-size: 18px;} }
+@media (min-width: 432px)  { body {font-size: 20px;} }
+@media (min-width: 480px)  { body {font-size: 22px;} }
+@media (min-width: 528px)  { body {font-size: 24px;} }
+@media (min-width: 576px)  { body {font-size: 26px;} }
+@media (min-width: 624px)  { body {font-size: 28px;} }
+@media (min-width: 672px)  { body {font-size: 30px;} }
+@media (min-width: 720px)  { body {font-size: 32px;} }
+@media (min-width: 768px)  { body {font-size: 34px;} } */
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	padding-top: 40px; /* it clears:both for navbar*/
+
+}
+
+.container {
+	padding: 25px;
+}
+/* navbar starts */
+.navbar {
+	background-color: #000 !important;
+}
+
+.navbar-header, .navbar-collapse{
+	background-color: #000 !important;
+}
+
+#myNavbar {
+	background-size:cover;
+}
+
+.navbar-brand {
+	font-size: 1.4em;
+	color: #fff !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 4vh 5vh 6vh 4vh;
+	float: right;
+}
+
+.navbar-toggle {
+	float: left;
+	margin-left: 2vh;
+}
+
+.navbar-brand:hover {
+	text-decoration: underline;
+}
+
+.nav a {
+  	font-size: 1.4em;
+	color: #fff !important;
+	text-align: center;
+	padding-top: 6vh;
+	margin-top: 1.5vh;
+}
+
+ul.nav a:hover {
+	text-decoration: underline;
+}
+ /*navbar ends*/
+
+ .headings {
+ 	border: 1px solid rgba(92,88,88,0.1);
+	border-radius: 8px 8px 0 0;
+	background: #2C3539 /* #382F2B*/;
+	color: #fff;
+	margin-top: 1em;
+	box-shadow: 
+    inset 0 2px 3px rgba(255,255,255,0.2),
+    inset 0 -2px 3px rgba(0,0,0,0.2),
+    0 1px 1px rgba(255,255,255,0.9);
+ }
+
+ .headings h5 {
+ 	font-size: 1.3em;
+ 	float: left;
+ }
+
+.box1 {
+	border: 2px solid #2C3539;
+	border-top-width: 1px;
+	height: 20vh;
+	padding-top: 15px;
+}
+
+img {
+	height: 13vh;
+	width: 13vh;
+	float: left;
+}
+
+h6 {
+	font-size: 1.2em;
+	margin-top: 25px;
+}
+
+#percent {
+	float: right;	
+}
+
+
+.box2 {
+	border: 2px solid #2C3539;
+	height: 20vh;
+	padding-top: 15px;
+	border-radius: 0 0 8px 8px;
+	background: #2C3539;
+	color: #fff;
+}
+
+
+
+
+

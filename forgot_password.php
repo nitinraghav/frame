@@ -32,7 +32,7 @@
 
 	$token= getRandomString(10);
 
-	$q= "INSERT INTO tokens (token,email) VALUES ('".$token."','".$email."')";
+	$q= "INSERT INTO pswd_reset_token (token,email) VALUES ('".$token."','".$email."')";
 	mysqli_query($conn, $q);
 	
 	function getRandomString($length) {

@@ -1,48 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>My Artwork</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php 
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-	
-	<link rel="stylesheet" href="5new.css">
-	
-</head>
+	$CSS = "5.css";
+	$pageTitle = "Artwork | Framework";
+	$pageHeader = "Artwork";
 
-<body>
-<div class="container">
-	<!-- navbar starts -->
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	include("../includes/header.php");
+
+	//check if user is logged in
+	if(!isset($_COOKIE['user_id'])){
+		header("location: ../index.php");
+	} else {
+		//caching the user id from set cookie
+		$user_id= $_COOKIE['user_id'];
 		
-		<div class="container-fluid">
+		//connect to DB
+		include("../includes/dbc.php");
 
-		  <div class="navbar-header">
-		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
-		      <span class="sr-only">Toggle navigation</span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span> 
-		    </button>
-		    <a class="navbar-brand" href="#">My Artwork</a>
-		  </div>
+		//query DB for total hours for a user
+		$query= "SELECT * FROM artwork WHERE winner_user_id = '".$user_id."'";
+		$result = mysqli_query($conn, $query);
+		$row = $result -> fetch_assoc();
+		$art_name = $row['artwork_name'];
+		$art_id = $row['art_id'];
+		$highest_bid_hours = $row['highest_bid_hours'];
 
-		  <div class="collapse navbar-collapse" id="myNavbar">
-		    <ul class="nav navbar-nav navbar-right">
-		      <li><a href="#home">Home</a></li>
-		      <li><a href="#about">About</a></li>
-		      <li><a href="#contact">Contact</a></li>
-		    </ul>
-		  </div>
 
-		</div>
-	</nav>
-	<!-- navbar ends -->
+		$query2= "SELECT *, SUM(total_time) AS total_time FROM user_hour_log WHERE user_id = '".$user_id."' && art_id = '".$art_id."'";
+		$result2 = mysqli_query($conn, $query2);
+
+		$row2 = $result2 -> fetch_assoc();
+
+		$hours_completed_artwork = $row2['total_time'];
+		
+	}
+
+
+?>
 
 	<!-- main content -->
 	
@@ -59,7 +52,7 @@
 	       	</div>
 
 	       	<div class="col-xs-8 col-sm-8 col-md-8" id="">
-	    		<h6 >John Doe <span id="percent">60%</span> </h6>  
+	    		<h6 > <?php echo $art_name; ?> <span id="percent"> <?php echo number_format($hours_completed_artwork/ $highest_bid_hours *100,0) ."%"; ?></span> </h6>  
 	       	</div>
 		</div>
 
@@ -102,7 +95,7 @@
 	       	</div>
 		</div>
 
-	</div>
+	</div> <!-- end container -->
 
 	
 	<!-- content ends  -->

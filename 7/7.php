@@ -13,8 +13,7 @@
 		//caching the user id from set cookie
 		$user_id= $_COOKIE['user_id'];
 		
-		//connect to DB
-		include("../includes/dbc.php");	
+		
 	}
 
 ?>

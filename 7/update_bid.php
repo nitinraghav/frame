@@ -40,4 +40,4 @@
 
 		}
 	}
-
+	session_destroy();

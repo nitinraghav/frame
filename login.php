@@ -1,51 +1,69 @@
-<?php
 
-if (isset($_POST['user']) && isset($_POST['pass'])) {
-	
-	include("includes/dbc.php");
+<?php 
+	$CSS = "style.css";
+	$pageTitle = "Sign-in | Framework";
+	$pageHeader = "Sign-in";
+	include("includes/header.php");
+?>
 
-	$myusername = $_POST['user'];
-	$mypassword = $_POST['pass'];
+		<div class="row">
+			
+			<div class="col-md-12">
+				<a href="fb_login.php"><img class="img-responsive fb-login-img" src="http://i.imgur.com/XHJ1R6s.png"></a>
+			</div>
 
-	$myusername = stripslashes($myusername);
-	$mypassword = stripslashes($mypassword);
+			<div class="col-md-12 txt">Or use your email:</div>
 
-	//getting hashed pswd from Database 
-	$sql = "SELECT * FROM user WHERE email='$myusername'";
+			<div id="response"></div>
 
-	$result = mysqli_query($conn, $sql);
-	$row = $result -> fetch_assoc();
-	$hash_pswd = $row['password'];
+			<form action="login_validation.php" method="POST" id="form">
+				<input class="form-control" type="email" name ="user" placeholder="email" id="email" required> <br />
+       			<input class="form-control" type="password" name="pass" placeholder="password" id="password" required> <div class="eror"></div><br />
+      			<button type="submit" class="btn btn-primary buttons" name="login" value="" id ="" >Login </button><br />
+			</form>
+			
+			<a href="password_forgot.php"><button type="submit" class="btn btn-primary buttons" id ="" >Forgot Password</button></a><br />
 
-	//hashing the pswd entered by user and comparing it with hashed pswd from DB
-	$hash =password_verify($mypassword, $hash_pswd);
+			<a href="sign_up/sign_up.php"><button type="submit" class="btn btn-primary buttons" id ="" >Sign-up</button></a> <br />
 
-	if ($hash == 0){
-		header("location: index.php");
-		exit;
+		</div>			
+	</div> <!-- end content -->
 
-	} else {
-		$sql = "SELECT * FROM user WHERE email='$myusername' and BINARY password='$hash_pswd'";
-		$result = mysqli_query($conn, $sql);
-		
-		//fetching email & user id from resut row
-		$row = $result -> fetch_assoc();
-		$email_id = $row['email'];
-		$user_id = $row['user_id'];
+	<!-- Latest compiled and minified JavaScript -->
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 
-		if(mysqli_num_rows($result) == 1) {
-			header("location: 4paul/4.php");
-			/* Set cookie to last 1 year */
-            setcookie('user_id', $user_id, time()+60*60*24*365);
-            
-		} else {
-		 	header("location: index.php");
-		}
+	<!-- jquery google cdn -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-		mysqli_close($conn);
-	}
+    <script type="text/javascript">
+     	$(document).ready(function(){
 
-} else {
-	echo 'You must supply a username and password.';
-}
+	        $('#form').submit( function (e) {
+	          	e.preventDefault();
 
+	        	var url = $(this).attr("action");
+				var formData = $(this).serialize();
+				//console.log(formData);
+
+	          	$.ajax(url ,{
+	            type: "POST",
+	            data: formData,
+	            dataType: "JSON",
+
+	            success: function (result) {
+	              if (result.return){
+	              	window.location.replace("index.php");
+
+	              } else {
+	              	$("#response").html("Incorrect Email or Password");
+	              } 
+
+	            }//end success
+	          });//end ajax
+	        });//end submit
+      	});// end ready
+    </script>
+
+</body>
+</html>

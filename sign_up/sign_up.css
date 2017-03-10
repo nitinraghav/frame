@@ -55,49 +55,45 @@ ul.nav a:hover {
 }
  /*navbar ends*/
 
-.fb-login-img {
-	margin-top: 4vh;
-	width: 92%;
-	height: 20vh;
-	margin-left: auto;
+.response {
+	width: 80%;
 	margin-right: auto;
+	margin-left: auto;
+}
+form>input {
+	margin-top: 3vh;
+	padding-left: 2vh;
+	width: 70%;
 }
 
-.txt {
-	margin-top: 2vh;
-	font-size: 1.4em;
+h4 {
+	text-align: left;
+	margin-left: 5% ;
+	margin-bottom: -2vh;
+	font-weight: bold;
 }
 
-#email {
-	width: 80%;
-	margin: auto;
-	margin-top: 2vh;
+select {
+	margin-top: 3vh;
 }
 
-#password {
-	width: 80%;
-	margin: auto;
-	margin-top: 2vh;
-}
-
-.buttons {
-	width: 80%;
-	height: 10vh;
-	margin: 2vh;
-	box-shadow: 1px 1px 2px #808080;
-	background-color: #27CCC0;	
-}
-
-.buttons:hover {
-	box-shadow: 1px 1px 2px #808080;
-	background-color: #27CCC0;		
-}
-
-.all-buttons {
+#sign_up_btn, #sign_up {
 	font-size: 1.5em;
 	width: 80%;
 	height: 10vh;
 	margin: 2vh;
 	box-shadow: 1px 1px 2px #808080;
 	background-color: #27CCC0;
+}
+
+#text_area{
+	margin-top: 10vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#check{
+	margin-top: 1vh;
 }
